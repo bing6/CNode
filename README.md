@@ -1,5 +1,5 @@
 # CNode iOS客户端
-CNode 社区(https://cnodejs.org)为国内最专业的 Node.js 开源技术社区，致力于 Node.js 的技术研究。
+CNode 社区( https://cnodejs.org )为国内最专业的 Node.js 开源技术社区，致力于 Node.js 的技术研究。
 
 # License
 
