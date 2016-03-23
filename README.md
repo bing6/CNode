@@ -5,7 +5,7 @@ CNode 社区( https://cnodejs.org )为国内最专业的 Node.js 开源技术社
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Bing
+Copyright (c) 2016 Bing Hao
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
