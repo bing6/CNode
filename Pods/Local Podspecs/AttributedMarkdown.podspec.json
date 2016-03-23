@@ -1,0 +1,51 @@
+{
+  "name": "AttributedMarkdown",
+  "version": "0.9.2",
+  "summary": "A short description of AttributedMarkdown.",
+  "homepage": "https://github.com/dreamwieber/AttributedMarkdown",
+  "screenshots": "http://gregorywieber.com/work/attributed_markdown.html",
+  "license": {
+    "type": "MIT / GPL",
+    "file": "LICENSE"
+  },
+  "authors": [
+    "Gregory Wieber",
+    "Jim Radford"
+  ],
+  "source": {
+    "git": "https://github.com/dreamwieber/AttributedMarkdown",
+    "tag": "0.9.1"
+  },
+  "platforms": {
+    "ios": "5.0",
+    "osx": "10.7"
+  },
+  "source_files": [
+    "markdown_lib.m",
+    "markdown_lib.h",
+    "markdown_peg.h",
+    "markdown_output.m",
+    "markdown_parser.m",
+    "platform.h"
+  ],
+  "public_header_files": "*.h",
+  "preserve_paths": [
+    "utility_functions.m",
+    "parsing_functions.m"
+  ],
+  "ios": {
+    "frameworks": [
+      "CoreText",
+      "UIKit",
+      "Foundation"
+    ]
+  },
+  "osx": {
+    "frameworks": [
+      "CoreText",
+      "AppKit",
+      "Foundation"
+    ]
+  },
+  "requires_arc": false
+}

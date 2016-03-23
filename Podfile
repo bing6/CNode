@@ -1,0 +1,13 @@
+platform:ios , '7.0'
+
+pod 'Masonry', '~> 0.6.4'
+pod 'UITableView+FDTemplateLayoutCell', '~> 1.4'
+pod 'SDWebImage', '~> 3.7.1'
+pod 'AFNetworking', '~> 3.0.4'
+pod 'FMDBDataTable', '~> 2.0.2'
+pod 'AttributedMarkdown', :git => 'https://github.com/dreamwieber/AttributedMarkdown.git'
+pod 'SVGKit', :git => 'https://github.com/SVGKit/SVGKit.git', :branch => '2.x'
+pod 'MBProgressHUD', '~> 0.9.2'
+pod 'KSRefresh', '~> 0.4'
+pod 'HTHorizontalSelectionList', '~> 0.6.4'
+pod 'HMSegmentedControl'

@@ -1,0 +1,1 @@
+../../../SVGKit/Source/DOM classes/Core DOM/CSSStyleDeclaration.h

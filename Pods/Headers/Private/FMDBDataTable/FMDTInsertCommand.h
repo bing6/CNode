@@ -1,0 +1,1 @@
+../../../FMDBDataTable/Classes/FMDTInsertCommand.h

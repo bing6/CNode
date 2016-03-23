@@ -1,0 +1,1 @@
+../../../SVGKit/Source/UIKit additions/SVGKLayeredImageView.h

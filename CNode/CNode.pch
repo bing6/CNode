@@ -1,0 +1,58 @@
+//
+//  CNode.pch
+//  CNode
+//
+//  Created by bing.hao on 16/3/14.
+//  Copyright © 2016年 Tsingda. All rights reserved.
+//
+
+#ifndef CNode_pch
+#define CNode_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <Masonry/Masonry.h>
+#import "UIView+CN.h"
+
+/**
+ * @brief 获取屏幕尺寸
+ */
+#define SCREEN_BOUNDS [[UIScreen mainScreen] bounds]
+/**
+ * @brief 获取屏幕宽
+ */
+#define SCREEN_WIDTH  SCREEN_BOUNDS.size.width
+/**
+ * @brief 获取屏幕高
+ */
+#define SCREEN_HEIGHT SCREEN_BOUNDS.size.height
+
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r / 255.0f green: g / 255.0f blue:b / 255.0f alpha:a]
+
+#define WS(alias)  __weak __typeof(&*self)alias = self
+
+#define SINGLE_LINE_WIDTH (1 / [UIScreen mainScreen].scale)
+
+/**
+ * @brief 主线程运行block语句块
+ */
+
+NS_INLINE void DISPATCH_MAIN_QUEUE(void (^block)(void)) {
+    if ([NSThread isMainThread]) {
+        block();
+    }
+    else {
+        dispatch_sync(dispatch_get_main_queue(), block);
+    }
+}
+
+/**
+ * @brief 主线程运行block语句块
+ */
+NS_INLINE void DISPATCH_GLOBAL_QUEUE(void (^block)(void)) {
+    dispatch_queue_t dispatchQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(dispatchQueue, block);
+}
+
+#endif /* CNode_pch */
