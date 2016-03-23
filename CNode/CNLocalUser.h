@@ -14,6 +14,8 @@
 @property (nonatomic, strong, readonly) NSString *userId;
 @property (nonatomic, strong, readonly) NSString *loginname;
 @property (nonatomic, strong, readonly) NSString *accesstoken;
+@property (nonatomic, assign) NSInteger unreadMessageCount;
+
 @property (nonatomic, strong, readonly) CNUser *info;
 
 /**

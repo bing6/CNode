@@ -23,10 +23,10 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.2.0):
     - CocoaLumberjack/Default
-  - FMDB (2.6):
-    - FMDB/standard (= 2.6)
-  - FMDB/standard (2.6)
-  - FMDBDataTable (2.0.2):
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - FMDBDataTable (2.1.0):
     - FMDB (~> 2.5)
   - HMSegmentedControl (1.5.2)
   - HTHorizontalSelectionList (0.6.4):
@@ -38,14 +38,14 @@ PODS:
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
-  - SVGKit (2.x):
+  - SVGKit (2.0.1):
     - CocoaLumberjack (~> 2.x)
   - UITableView+FDTemplateLayoutCell (1.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.4)
   - AttributedMarkdown (from `https://github.com/dreamwieber/AttributedMarkdown.git`)
-  - FMDBDataTable (~> 2.0.2)
+  - FMDBDataTable (~> 2.1.0)
   - HMSegmentedControl
   - HTHorizontalSelectionList (~> 0.6.4)
   - KSRefresh (~> 0.4)
@@ -67,15 +67,15 @@ CHECKOUT OPTIONS:
     :commit: 4aef3c80e0ffe6c7011c20c7f703ea56af774861
     :git: https://github.com/dreamwieber/AttributedMarkdown.git
   SVGKit:
-    :commit: 7f9247f0302d428409e103310e2123f678bc87c6
+    :commit: dac062c56366c21e2143da0cccd55fa3b0ea0df6
     :git: https://github.com/SVGKit/SVGKit.git
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   AttributedMarkdown: ac5060667280be8cc8ee33a46c73e4ec6b17ca1a
   CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
-  FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
-  FMDBDataTable: 8ffa41371fa261434498c8b43c6ba9b461efefb6
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  FMDBDataTable: caeff6a17cb83373bea64c6aaf9bf188367801c8
   HMSegmentedControl: 83b9686022d2176fb6457d2bdb61e5d6393fed7d
   HTHorizontalSelectionList: d815950549e9599a1ca1b38d16a4450704272dfd
   KSRefresh: 90680431147d3b25fdc658cfa9d85c47bd963934
@@ -83,7 +83,7 @@ SPEC CHECKSUMS:
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
-  SVGKit: 199cfcfd5558377b8f18a9a73439eb4cbc412014
+  SVGKit: 2afbeaf2c2be4615476951284750c3ddb790d0c7
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
 
 COCOAPODS: 0.39.0

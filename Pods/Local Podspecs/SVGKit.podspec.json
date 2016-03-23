@@ -1,6 +1,6 @@
 {
   "name": "SVGKit",
-  "version": "2.x",
+  "version": "2.0.1",
   "license": "MIT",
   "platforms": {
     "ios": "5.0",

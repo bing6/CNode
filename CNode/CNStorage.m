@@ -7,6 +7,7 @@
 //
 
 #import "CNStorage.h"
+#import <SDWebImage/SDImageCache.h>
 
 @implementation CNStorage
 
@@ -151,6 +152,25 @@
     [cmd where:@"loginname" equalTo:loginname];
     [cmd where:@"topicId" equalTo:topicId];
     [cmd saveChangesInBackground:callback];
+}
+
++ (void)clearLocaldata:(FMDT_CALLBACK_RESULT_NOT)callback {
+
+    DISPATCH_GLOBAL_QUEUE(^{
+        
+        FMDTDeleteCommand *topicCmd = FMDT_DELETE([CNStorage shared].topic);
+        FMDTDeleteCommand *replyCmd = FMDT_DELETE([CNStorage shared].reply);
+        
+        [topicCmd saveChanges];
+        [replyCmd saveChanges];
+        [[SDImageCache sharedImageCache] cleanDisk];
+        
+        if (callback) {
+            DISPATCH_MAIN_QUEUE(^{
+                callback();
+            });
+        }
+    });
 }
 
 @end

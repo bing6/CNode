@@ -54,13 +54,14 @@
 		37527AF11CA1096A001C1ACD /* Like_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37527AEF1CA1096A001C1ACD /* Like_s@2x.png */; };
 		37527AF21CA1096A001C1ACD /* Like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37527AF01CA1096A001C1ACD /* Like@2x.png */; };
 		37527AF51CA12F58001C1ACD /* CNRecent.m in Sources */ = {isa = PBXBuildFile; fileRef = 37527AF41CA12F58001C1ACD /* CNRecent.m */; };
-		37527AF71CA14461001C1ACD /* GitHub@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37527AF61CA14461001C1ACD /* GitHub@2x.png */; };
 		375F84561C9793720018B5A4 /* CNTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F84551C9793720018B5A4 /* CNTopic.m */; };
 		375F84591C9795A40018B5A4 /* CNBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F84581C9795A40018B5A4 /* CNBaseModel.m */; };
 		375F845C1C9799450018B5A4 /* CNStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F845B1C9799450018B5A4 /* CNStorage.m */; };
+		376C12341CA266A0001CB444 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 376C12331CA266A0001CB444 /* bg.jpg */; };
+		376C12381CA26AA7001CB444 /* GitHub-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 376C12371CA26AA7001CB444 /* GitHub-1@2x.png */; };
+		376C123E1CA28342001CB444 /* CNCollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 376C123D1CA28342001CB444 /* CNCollectViewController.m */; };
 		376C36B31C9F83D200D22443 /* CNAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 376C36B21C9F83D200D22443 /* CNAvatarView.m */; };
 		376C36B81C9FB7FA00D22443 /* CNUserPreviewHeadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 376C36B71C9FB7FA00D22443 /* CNUserPreviewHeadTableViewCell.m */; };
-		376C36BA1C9FC08B00D22443 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 376C36B91C9FC08B00D22443 /* bg.jpg */; };
 		376C36C61C9FDEAF00D22443 /* CNUserPreviewRecentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 376C36C51C9FDEAF00D22443 /* CNUserPreviewRecentTableViewCell.m */; };
 		37B6D0021C98E8C1008AD5C9 /* CNQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B6D0011C98E8C1008AD5C9 /* CNQRCodeViewController.m */; };
 		37B6D0051C98EA05008AD5C9 /* UIView+CN.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B6D0041C98EA05008AD5C9 /* UIView+CN.m */; };
@@ -146,18 +147,20 @@
 		37527AF01CA1096A001C1ACD /* Like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Like@2x.png"; sourceTree = "<group>"; };
 		37527AF31CA12F58001C1ACD /* CNRecent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNRecent.h; sourceTree = "<group>"; };
 		37527AF41CA12F58001C1ACD /* CNRecent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNRecent.m; sourceTree = "<group>"; };
-		37527AF61CA14461001C1ACD /* GitHub@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GitHub@2x.png"; sourceTree = "<group>"; };
 		375F84541C9793720018B5A4 /* CNTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNTopic.h; sourceTree = "<group>"; };
 		375F84551C9793720018B5A4 /* CNTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNTopic.m; sourceTree = "<group>"; };
 		375F84571C9795A40018B5A4 /* CNBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNBaseModel.h; sourceTree = "<group>"; };
 		375F84581C9795A40018B5A4 /* CNBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNBaseModel.m; sourceTree = "<group>"; };
 		375F845A1C9799450018B5A4 /* CNStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNStorage.h; sourceTree = "<group>"; };
 		375F845B1C9799450018B5A4 /* CNStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNStorage.m; sourceTree = "<group>"; };
+		376C12331CA266A0001CB444 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		376C12371CA26AA7001CB444 /* GitHub-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GitHub-1@2x.png"; sourceTree = "<group>"; };
+		376C123C1CA28342001CB444 /* CNCollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNCollectViewController.h; sourceTree = "<group>"; };
+		376C123D1CA28342001CB444 /* CNCollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNCollectViewController.m; sourceTree = "<group>"; };
 		376C36B11C9F83D200D22443 /* CNAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNAvatarView.h; sourceTree = "<group>"; };
 		376C36B21C9F83D200D22443 /* CNAvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNAvatarView.m; sourceTree = "<group>"; };
 		376C36B61C9FB7FA00D22443 /* CNUserPreviewHeadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNUserPreviewHeadTableViewCell.h; sourceTree = "<group>"; };
 		376C36B71C9FB7FA00D22443 /* CNUserPreviewHeadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNUserPreviewHeadTableViewCell.m; sourceTree = "<group>"; };
-		376C36B91C9FC08B00D22443 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		376C36C41C9FDEAF00D22443 /* CNUserPreviewRecentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNUserPreviewRecentTableViewCell.h; sourceTree = "<group>"; };
 		376C36C51C9FDEAF00D22443 /* CNUserPreviewRecentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNUserPreviewRecentTableViewCell.m; sourceTree = "<group>"; };
 		37B6D0001C98E8C1008AD5C9 /* CNQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNQRCodeViewController.h; sourceTree = "<group>"; };
@@ -259,14 +262,14 @@
 		373910AD1C9691D300B33B2E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				376C12371CA26AA7001CB444 /* GitHub-1@2x.png */,
+				376C12331CA266A0001CB444 /* bg.jpg */,
 				37DB44241CA224A000B1BF45 /* reolayImage@2x.png */,
-				37527AF61CA14461001C1ACD /* GitHub@2x.png */,
 				37527AEF1CA1096A001C1ACD /* Like_s@2x.png */,
 				37527AF01CA1096A001C1ACD /* Like@2x.png */,
 				37527AEC1CA1088E001C1ACD /* comments@2x.png */,
 				37527AD81CA0D68E001C1ACD /* shoucang-@2x.png */,
 				37527AD91CA0D68E001C1ACD /* shoucang@2x.png */,
-				376C36B91C9FC08B00D22443 /* bg.jpg */,
 				37B6D0161C990F74008AD5C9 /* cnodejs.svg */,
 				37B6D0111C99095D008AD5C9 /* chakan@2x.png */,
 				37F856E51C97CA2800C39221 /* fanhui@2x.png */,
@@ -390,6 +393,15 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		376C123F1CA28348001CB444 /* CNCollectViewController */ = {
+			isa = PBXGroup;
+			children = (
+				376C123C1CA28342001CB444 /* CNCollectViewController.h */,
+				376C123D1CA28342001CB444 /* CNCollectViewController.m */,
+			);
+			name = CNCollectViewController;
+			sourceTree = "<group>";
+		};
 		376C36B41C9FB7C000D22443 /* CNUserPreviewViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,6 +506,7 @@
 		37B6D0101C9907B8008AD5C9 /* 话题相关 */ = {
 			isa = PBXGroup;
 			children = (
+				376C123F1CA28348001CB444 /* CNCollectViewController */,
 				37DB44211CA21C0B00B1BF45 /* CNTopicEditViewController */,
 				376C36CB1C9FEEC700D22443 /* CNTopicDetailViewController */,
 				376C36CA1C9FEEBB00D22443 /* CNTopicListViewController */,
@@ -592,6 +605,7 @@
 			files = (
 				373910D71C9691D300B33B2E /* Icon.png in Resources */,
 				373910DA1C9691D300B33B2E /* Default-568h@2x~iphone.png in Resources */,
+				376C12341CA266A0001CB444 /* bg.jpg in Resources */,
 				373910D81C9691D300B33B2E /* Icon@2x.png in Resources */,
 				37B6D0171C990F74008AD5C9 /* cnodejs.svg in Resources */,
 				37B6D0121C99095D008AD5C9 /* chakan@2x.png in Resources */,
@@ -611,7 +625,7 @@
 				37527AF21CA1096A001C1ACD /* Like@2x.png in Resources */,
 				373910DE1C9691D300B33B2E /* Default-Landscape@2x~ipad.png in Resources */,
 				373910D11C9691D300B33B2E /* Icon-72.png in Resources */,
-				37527AF71CA14461001C1ACD /* GitHub@2x.png in Resources */,
+				376C12381CA26AA7001CB444 /* GitHub-1@2x.png in Resources */,
 				37527AEE1CA1088E001C1ACD /* comments@2x.png in Resources */,
 				37527AF11CA1096A001C1ACD /* Like_s@2x.png in Resources */,
 				373910E11C9691D300B33B2E /* Default-Portrait~ipad.png in Resources */,
@@ -627,7 +641,6 @@
 				373910D61C9691D300B33B2E /* Icon-Small@2x.png in Resources */,
 				37DB44251CA224A000B1BF45 /* reolayImage@2x.png in Resources */,
 				373910CB1C9691D300B33B2E /* Icon-40@2x.png in Resources */,
-				376C36BA1C9FC08B00D22443 /* bg.jpg in Resources */,
 				37F856FA1C97DF2200C39221 /* t.html in Resources */,
 				373910CC1C9691D300B33B2E /* icon-50.png in Resources */,
 				373910DC1C9691D300B33B2E /* Default-736h.png in Resources */,
@@ -693,6 +706,7 @@
 				374B443B1C9A9EF100F776AB /* CNUserPreviewViewController.m in Sources */,
 				37B6D0081C98F845008AD5C9 /* CNWeb.m in Sources */,
 				373910E71C96A51F00B33B2E /* CNTopicListItemTableViewCell.m in Sources */,
+				376C123E1CA28342001CB444 /* CNCollectViewController.m in Sources */,
 				374B44321C9A350E00F776AB /* CNUser.m in Sources */,
 				374B44351C9A381E00F776AB /* CNMainViewController.m in Sources */,
 				37F856DD1C97B1BA00C39221 /* CNTopicDetailViewController.m in Sources */,

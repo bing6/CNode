@@ -18,7 +18,6 @@
 #import "CNLocalUser.h"
 
 #import <UITableView+FDTemplateLayoutCell.h>
-//#import <HMSegmentedControl/HMSegmentedControl.h>
 
 @interface CNUserPreviewViewController ()
 
@@ -30,6 +29,8 @@
  *  最近相关的话题
  */
 @property (nonatomic, strong) NSMutableArray *dataSource;
+
+@property (nonatomic, weak) UIButton *rightBTB;
 
 @end
 
@@ -52,7 +53,6 @@
     self.user.loginname = self.loginname;
     self.user.avatar_url = self.avatar;
     
-    self.tableView.backgroundColor = RGBA(68, 68, 68, 1);
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(UIEdgeInsetsZero);
@@ -97,20 +97,26 @@
     });
 }
 
+- (UIButton *)navigationBarRightButton {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [button setImage:[UIImage imageNamed:@"GitHub-1.png"] forState:UIControlStateNormal];
+    [button setFrame:CGRectMake(0, 0, 44, 44)];
+    return button;
+}
+
+- (void)navigationBarRightButtonHandler:(id)sender {
+    if (self.user.githubUsername) {
+        NSString *URLString = [NSString stringWithFormat:@"https://github.com/%@", self.user.githubUsername];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:URLString]];
+    }
+}
+
 #pragma mark -Fill TableViewCell
 
 - (void)fillHeadCell:(CNUserPreviewHeadTableViewCell *)cell {
     
     cell.avatarIV.URLString = self.user.avatar_url;
-    if (self.user.githubUsername) {
-        NSString *URLString = [NSString stringWithFormat:@"https://github.com/%@", self.user.githubUsername];
-        cell.loginnameLB.text = [NSString stringWithFormat:@"@%@", self.user.githubUsername];
-        [cell.loginnameLB onClick:^{
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:URLString]];
-        }];
-    } else {
-        cell.githubIV.hidden = NO;
-    }
 }
 
 - (void)fillRecentCell:(CNUserPreviewRecentTableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
@@ -170,49 +176,5 @@
         }];
     }
 }
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-//    if (section == 1) {
-//        return 50;
-//    }
-//    return 0;
-//}
-//
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-//    if (section == 1) {
-//        
-//        HMSegmentedControl *segmented = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"最近创建的话题", @"最近参与的话题"]];
-//     
-//        NSDictionary *attrs = @{ NSFontAttributeName : [UIFont systemFontOfSize:14],
-//                                 NSForegroundColorAttributeName : [UIColor whiteColor] };
-//        
-//        segmented.frame = CGRectMake(0, 0, SCREEN_WIDTH, 50);
-//        segmented.selectionIndicatorHeight = 4.0f;
-//        segmented.backgroundColor = RGBA(128, 189, 1, 1);
-//        segmented.titleTextAttributes = attrs;
-//        segmented.selectionIndicatorColor = RGBA(68, 68, 68, 1);
-//        segmented.selectionStyle = HMSegmentedControlSelectionStyleFullWidthStripe;
-//        segmented.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
-//        segmented.shouldAnimateUserSelection = NO;
-//        segmented.selectedSegmentIndex = 0;
-//        segmented.shouldAnimateUserSelection = YES;
-//        segmented.selectedSegmentIndex = self.segmentedIndex;
-//        
-//        [segmented addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
-//        
-//        return segmented;
-//    }
-//    return nil;
-//}
-//
-//#pragma mark - HMSegmentedControl Event
-//
-//
-//- (void)segmentedControlChangedValue:(HMSegmentedControl *)segmentedControl {
-//    
-//    self.segmentedIndex = segmentedControl.selectedSegmentIndex;
-//
-//    [self.tableView reloadData];
-//}
 
 @end

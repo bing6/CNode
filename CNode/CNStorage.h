@@ -111,4 +111,11 @@
  */
 + (void)removeFavoriteWithLoginname:(NSString *)loginname withTopicId:(NSString *)topicId callback:(void (^)())callback;
 
+/**
+ *  清除本地缓存
+ *
+ *  @param callback 回调方法
+ */
++ (void)clearLocaldata:(FMDT_CALLBACK_RESULT_NOT)callback;
+
 @end

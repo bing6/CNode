@@ -32,6 +32,8 @@ static NSString *identifier = @"Page";
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSArray *dataSource;
 
+//@property (nonatomic, weak) UIView *badgeNV;
+
 @end
 
 @implementation CNMainViewController
@@ -118,23 +120,8 @@ static NSString *identifier = @"Page";
         [self addChildViewController:self.dataSource[i]];
     }
     
-
-//    self.navigationController.navigationBarHidden = YES;
-//    
-//    [self addController];
     [self autoSignIn];
 //    [self newMessage];
-}
-
-
-/**
- *  加载默认Controller
- */
-- (void)addController {
-    CNTopicListViewController *vc = [CNTopicListViewController new];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    [self addChildViewController:nav];
-    [self.view addSubview:nav.view];
 }
 
 /**
@@ -144,25 +131,42 @@ static NSString *identifier = @"Page";
     [CNLocalUser autoSignIn];
 }
 
-/**
- *  轮询读取消息
- */
-- (void)newMessage {
-    if ([CNLocalUser defaultUser] && _timer == nil) {
-        self.timer = [NSTimer timerWithTimeInterval:5.0f target:self selector:@selector(timeHandler) userInfo:nil repeats:YES];
-    }
-}
-
-- (void)timeHandler {
-    
-    API_GET_MESSAGE_COUNT(^(id responseObject, NSError *error) {
-        //这里判断是否有用户登录是因为,有时网络慢请求没回来,
-        //但是用户已经退出
-        if ([CNLocalUser defaultUser]) {
-            
-        }
-    });
-}
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:animated];
+//    //消息提醒
+//    if ([CNLocalUser defaultUser]) {
+//        if ([CNLocalUser defaultUser].unreadMessageCount > 0) {
+//            self.badgeNV.hidden = NO;
+//        } else {
+//            self.badgeNV.hidden = YES;
+//        }
+//    }
+//}
+//
+///**
+// *  轮询读取消息
+// */
+//- (void)newMessage {
+//    if ([CNLocalUser defaultUser] && _timer == nil) {
+//        self.timer = [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(timeHandler) userInfo:nil repeats:YES];
+//    }
+//}
+//
+//- (void)timeHandler {
+//    
+//    API_GET_MESSAGE_COUNT(^(id responseObject, NSError *error) {
+//        //这里判断是否有用户登录是因为,有时网络慢请求没回来,
+//        //但是用户已经退出
+//        if ([CNLocalUser defaultUser]) {
+//            [CNLocalUser defaultUser].unreadMessageCount = [[responseObject objectForKey:@"data"] integerValue];
+//            if ([CNLocalUser defaultUser].unreadMessageCount > 0) {
+//                self.badgeNV.hidden = NO;
+//            } else {
+//                self.badgeNV.hidden = YES;
+//            }
+//        }
+//    });
+//}
 
 #pragma mark - override BaseViewController
 
@@ -172,18 +176,26 @@ static NSString *identifier = @"Page";
 
 - (void)receiveNotificationHandler:(NSNotification *)notice {
     if ([notice.name isEqualToString:@"LoginSuccess"]) {
-        [self newMessage];
+//        [self newMessage];
         return;
     }
     if ([notice.name isEqualToString:@"LogOutSuccess"]) {
-        [_timer invalidate];
-        [self setTimer:nil];
+//        [_timer invalidate];
+//        [self setTimer:nil];
     }
 }
 
 - (UIButton *)navigationBarLeftButton {
     UIButton * backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    
+//    //消息提醒
+//    UIView *badgeNumberView = [UIView new];
+//    badgeNumberView.backgroundColor = [UIColor redColor];
+//    badgeNumberView.frame = CGRectMake(17, 10, 10, 10);
+//    badgeNumberView.radius = 5;
+//    badgeNumberView.hidden = YES;
+//    self.badgeNV = badgeNumberView;
+//    
+//    [backButton addSubview:badgeNumberView];
     [backButton setFrame:CGRectMake(0, 0, 22, 44)];
     [backButton setImage:[UIImage imageNamed:@"chakan.png"] forState:UIControlStateNormal];
     return backButton;

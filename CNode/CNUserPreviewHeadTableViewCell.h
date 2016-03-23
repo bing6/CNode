@@ -15,6 +15,5 @@
 @property (nonatomic, strong, readonly) UILabel *loginnameLB;
 @property (nonatomic, strong, readonly) UILabel *scoreLB;
 @property (nonatomic, strong, readonly) UILabel *collectLB;
-@property (nonatomic, strong, readonly) UIImageView *githubIV;
 
 @end

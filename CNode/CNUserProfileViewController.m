@@ -9,12 +9,14 @@
 #import "CNUserProfileViewController.h"
 #import "CNLoginViewController.h"
 #import "CNLocalUser.h"
+#import "CNStorage.h"
 
 #import <UIImageView+WebCache.h>
 
 #define CN_USER_AVATAR 101
 #define CN_USER_GITHUB 102
 #define CN_USER_SCORE 103
+#define CN_USER_COLLECT 104
 #define CN_MESSAGE 201
 #define CN_SETTINGS_EXIT 301
 #define CN_SETTINGS_CLEAR 302
@@ -32,7 +34,8 @@
         _dataSource = @[ @(CN_USER_AVATAR),
                          @(CN_USER_GITHUB),
                          @(CN_USER_SCORE),
-                         @(CN_MESSAGE),
+                         @(CN_USER_COLLECT),
+//                         @(CN_MESSAGE),
                          @(CN_SETTINGS_CLEAR),
                          @(CN_SETTINGS_EXIT) ];
     }
@@ -49,17 +52,6 @@
         make.edges.equalTo(self.view);
     }];
 }
-
-//- (NSArray *)registerNotifications {
-//    return @[ @"LoginSuccess" ];
-//}
-//
-//- (void)receiveNotificationHandler:(NSNotification *)notice {
-//    if ([notice.name isEqualToString:@"LoginSuccess"]) {
-//        self.title = [CNLocalUser defaultUser].loginname;
-//        [self.tableView reloadData];
-//    }
-//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if ([CNLocalUser defaultUser]) {
@@ -108,12 +100,29 @@
         {
             cell.textLabel.text = [NSString stringWithFormat:@"积分:%d", (int)[CNLocalUser defaultUser].info.score];
             cell.textLabel.font = [UIFont systemFontOfSize:15];
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         }
         case CN_MESSAGE:
         {
+            UIView *badgeNumberView = [UIView new];
+            badgeNumberView.backgroundColor = [UIColor redColor];
+            badgeNumberView.radius = 5;
+            badgeNumberView.hidden = YES;
+            
+            [cell.contentView addSubview:badgeNumberView];
+            [badgeNumberView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.right.equalTo(cell.contentView).offset(-10);
+                make.centerY.equalTo(cell.contentView);
+                make.size.mas_equalTo(CGSizeMake(10, 10));
+            }];
             cell.textLabel.text = @"消息";
+            cell.textLabel.font = [UIFont systemFontOfSize:15];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            break;
+        }
+        case CN_USER_COLLECT:
+        {
+            cell.textLabel.text = @"我的收藏";
             cell.textLabel.font = [UIFont systemFontOfSize:15];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
@@ -151,6 +160,26 @@
             NSString *github = [CNLocalUser defaultUser].info.githubUsername;
             NSString *URLString = [NSString stringWithFormat:@"https://github.com/%@", github];
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:URLString]];
+            break;
+        }
+        case CN_USER_COLLECT: {
+            
+            [self pushWithName:@"CNCollectViewController"];
+            break;
+        }
+        case CN_SETTINGS_CLEAR: {
+            
+            [self.hud show:YES];
+            [CNStorage clearLocaldata:^{
+                [self.hud hide:YES];
+            }];
+            break;
+        }
+        case CN_SETTINGS_EXIT: {
+            
+            [CNLocalUser singOut];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"LogOutSuccess" object:nil];
+            [self.navigationController popViewControllerAnimated:YES];
             break;
         }
     }
