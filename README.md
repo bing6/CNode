@@ -20,6 +20,7 @@ CNode 社区原本是有移动客户端的，但由于是混合开发效果并�
 我的联系方式:
 
 mail:bing.hao1982@gmail.com
+
 qq:6043625
 
 # License
