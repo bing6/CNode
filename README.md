@@ -1,4 +1,4 @@
-# CNode iOS客户端
+# CNode 
 
 官方网址: https://cnodejs.org 
 
@@ -11,6 +11,11 @@ CNode 的 SLA 保证是，一个9，即 90.000000%。
 社区目前由 @alsotang 在维护，有问题请联系：https://github.com/alsotang
 
 官方微博：http://weibo.com/cnodejs
+
+# iOS客户端
+
+CNode 社区原本是有移动客户端的，但由于是混合开发效果并不理想，所以发起了这个项目。
+目前功能还在不段完善中，欢迎大家批评指教。
 
 # License
 
