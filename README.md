@@ -1,5 +1,16 @@
 # CNode iOS客户端
-CNode 社区( https://cnodejs.org )为国内最专业的 Node.js 开源技术社区，致力于 Node.js 的技术研究。
+
+官方网址: https://cnodejs.org 
+
+CNode 社区为国内最专业的 Node.js 开源技术社区，致力于 Node.js 的技术研究。
+
+CNode 社区由一批热爱 Node.js 技术的工程师发起，目前已经吸引了互联网各个公司的专业技术人员加入，我们非常欢迎更多对 Node.js 感兴趣的朋友。
+
+CNode 的 SLA 保证是，一个9，即 90.000000%。
+
+社区目前由 @alsotang 在维护，有问题请联系：https://github.com/alsotang
+
+官方微博：http://weibo.com/cnodejs
 
 # License
 
