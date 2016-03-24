@@ -197,7 +197,7 @@
                 [CNStorage saveUserWithObject:user];
                 [self.hud hide:YES];
                 //发送通知登录完成
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"LoginSuccess" object:nil];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"LoginSuccess" object:loginname];
                 [self dismissViewControllerAnimated:YES completion:nil];
             });
         }

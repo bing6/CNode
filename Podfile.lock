@@ -41,6 +41,7 @@ PODS:
   - SVGKit (2.0.1):
     - CocoaLumberjack (~> 2.x)
   - UITableView+FDTemplateLayoutCell (1.4)
+  - UMengAnalytics-NO-IDFA (3.6.7)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.4)
@@ -54,6 +55,7 @@ DEPENDENCIES:
   - SDWebImage (~> 3.7.1)
   - SVGKit (from `https://github.com/SVGKit/SVGKit.git`, branch `2.x`)
   - UITableView+FDTemplateLayoutCell (~> 1.4)
+  - UMengAnalytics-NO-IDFA
 
 EXTERNAL SOURCES:
   AttributedMarkdown:
@@ -85,5 +87,6 @@ SPEC CHECKSUMS:
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SVGKit: 2afbeaf2c2be4615476951284750c3ddb790d0c7
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
+  UMengAnalytics-NO-IDFA: 6d02561a00579b2e37718f204eb81347df5d7b8b
 
 COCOAPODS: 0.39.0

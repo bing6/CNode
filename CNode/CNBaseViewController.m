@@ -7,6 +7,7 @@
 //
 
 #import "CNBaseViewController.h"
+#import <MobClick.h>
 
 @interface CNBaseViewController ()<UIGestureRecognizerDelegate>
 
@@ -73,6 +74,18 @@
     if (_hud) {
         [_hud setHidden:YES];
     }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    //友盟记录页面访问统计
+    [MobClick beginLogPageView:NSStringFromClass([self class])];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    //友盟记录页面访问统计
+    [MobClick endLogPageView:NSStringFromClass([self class])];
 }
 
 #pragma mark - 自定义导航

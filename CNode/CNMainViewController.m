@@ -13,8 +13,10 @@
 #import "CNLoginViewController.h"
 
 #import <HTHorizontalSelectionList/HTHorizontalSelectionList.h>
+#import <MobClick.h>
 
 static NSString *identifier = @"Page";
+#define kH ([UIApplication sharedApplication].statusBarFrame.size.height + self.navigationController.navigationBar.height + 40)
 
 @interface CNMainViewController ()
 <
@@ -43,6 +45,7 @@ static NSString *identifier = @"Page";
         _selectionList = [[HTHorizontalSelectionList alloc] init];
         _selectionList.dataSource = self;
         _selectionList.delegate = self;
+        
         
 //        _selectionList.selectionIndicatorColor = RGBA(68, 68, 68, 1);
 ////        _selectionList.selectionIndicatorStyle = HTHorizontalSelectionIndicatorStyleButtonBorder;
@@ -175,10 +178,14 @@ static NSString *identifier = @"Page";
 
 - (void)receiveNotificationHandler:(NSNotification *)notice {
     if ([notice.name isEqualToString:@"LoginSuccess"]) {
+        //友盟记录登录用户统计
+        [MobClick profileSignInWithPUID:notice.object];
 //        [self newMessage];
         return;
     }
     if ([notice.name isEqualToString:@"LogOutSuccess"]) {
+        //友盟记录登出用户统计
+        [MobClick profileSignOff];
 //        [_timer invalidate];
 //        [self setTimer:nil];
     }
@@ -250,19 +257,16 @@ static NSString *identifier = @"Page";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    
     UIViewController *vc = [self.dataSource objectAtIndex:indexPath.row];
-    
-    vc.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 104);
+    vc.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - kH);
     [cell addSubview:vc.view];
-    
     return cell;
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT - 104);
+    return CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT - kH);
 }
 
 #pragma mark - UIScrollViewDelegate

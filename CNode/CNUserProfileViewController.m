@@ -148,6 +148,11 @@
                 make.right.equalTo(cell.contentView).offset(-30);
                 make.height.mas_equalTo(44);
             }];
+            [button onClick:^{
+                [CNLocalUser singOut];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"LogOutSuccess" object:nil];
+                [self.navigationController popViewControllerAnimated:YES];
+            }];
             break;
         }
     }
@@ -173,13 +178,6 @@
             [CNStorage clearLocaldata:^{
                 [self.hud hide:YES];
             }];
-            break;
-        }
-        case CN_SETTINGS_EXIT: {
-            
-            [CNLocalUser singOut];
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"LogOutSuccess" object:nil];
-            [self.navigationController popViewControllerAnimated:YES];
             break;
         }
     }

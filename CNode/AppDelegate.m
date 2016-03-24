@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <MobClick.h>
 
 @interface AppDelegate ()
 
@@ -14,10 +15,21 @@
 
 @implementation AppDelegate
 
+- (void)umengSetup {
+    
+    NSString *umPath = [[NSBundle mainBundle] pathForResource:@"umeng" ofType:@"plist"];
+    NSDictionary *umConfiger = [NSDictionary dictionaryWithContentsOfFile:umPath];
+    if (umConfiger) {
+        [MobClick startWithAppkey:[umConfiger objectForKey:@"appid"] reportPolicy:BATCH channelId:[umConfiger objectForKey:@"channel"]];
+    }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    //集成友盟统计
+    [self umengSetup];
+
     return YES;
 }
 
