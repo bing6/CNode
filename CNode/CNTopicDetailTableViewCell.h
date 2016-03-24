@@ -11,13 +11,13 @@
 
 @interface CNTopicDetailTableViewCell : UITableViewCell<UIWebViewDelegate>
 
-@property (nonatomic, strong) UILabel *titleLB;
-@property (nonatomic, strong) CNAvatarView *avatarIV;
-@property (nonatomic, strong) UILabel *nicknameLB;
-@property (nonatomic, strong) UILabel *createdAtLB;
-@property (nonatomic, strong) UILabel *tabLB;
-@property (nonatomic, strong) UILabel *statisticsLB;
-@property (nonatomic, strong) UILabel *contentLB;
-@property (nonatomic, strong) UIWebView *bodyWV;
+@property (nonatomic, strong, readonly) UILabel *titleLB;
+@property (nonatomic, strong, readonly) CNAvatarView *avatarIV;
+@property (nonatomic, strong, readonly) UILabel *nicknameLB;
+@property (nonatomic, strong, readonly) UILabel *createdAtLB;
+@property (nonatomic, strong, readonly) UILabel *tabLB;
+@property (nonatomic, strong, readonly) UILabel *statisticsLB;
+@property (nonatomic, strong, readonly) UIWebView *bodyWV;
+@property (nonatomic, strong, readonly) UIActivityIndicatorView *progressAIV;
 
 @end

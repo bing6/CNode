@@ -16,8 +16,8 @@
 @synthesize nicknameLB = _nicknameLB;
 @synthesize createdAtLB = _createdAtLB;
 @synthesize statisticsLB = _statisticsLB;
-@synthesize contentLB = _contentLB;
 @synthesize bodyWV = _bodyWV;
+@synthesize progressAIV = _progressAIV;
 
 - (UILabel *)tabLB {
     if (_tabLB == nil) {
@@ -73,24 +73,23 @@
     return _statisticsLB;
 }
 
-- (UILabel *)contentLB {
-    if (_contentLB == nil) {
-        _contentLB = [UILabel new];
-        _contentLB.font = [UIFont systemFontOfSize:14];
-        _contentLB.numberOfLines = 0;
-    }
-    return _contentLB;
-}
-
 - (UIWebView *)bodyWV {
     if (_bodyWV == nil) {
         _bodyWV = [[UIWebView alloc] init];
         _bodyWV.scrollView.scrollEnabled = NO;
         _bodyWV.backgroundColor = RGBA(255, 255, 255, 1);
         _bodyWV.scrollView.backgroundColor = RGBA(255, 255, 255, 1);
-        _bodyWV.userInteractionEnabled = NO;
+        _bodyWV.scalesPageToFit = NO;
     }
     return _bodyWV;
+}
+
+- (UIActivityIndicatorView *)progressAIV {
+    if (_progressAIV == nil) {
+        _progressAIV = [UIActivityIndicatorView new];
+        _progressAIV.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+    }
+    return _progressAIV;
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -105,8 +104,8 @@
         [self.contentView addSubview:self.nicknameLB];
         [self.contentView addSubview:self.createdAtLB];
         [self.contentView addSubview:self.statisticsLB];
-//        [self.contentView addSubview:self.contentLB];
         [self.contentView addSubview:self.bodyWV];
+        [self.contentView addSubview:self.progressAIV];
         
         WS(ws);
         
@@ -118,7 +117,6 @@
         [self.avatarIV mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(ws.titleLB);
             make.top.equalTo(ws.titleLB.mas_bottom).offset(10);
-//            make.bottom.equalTo(ws.contentView).offset(-10);
             make.size.mas_equalTo(CGSizeMake(50, 50));
         }];
         [self.nicknameLB mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -138,17 +136,16 @@
             make.right.equalTo(ws.contentView).offset(-10);
             make.top.equalTo(ws.tabLB.mas_bottom).offset(5);
         }];
-//        [self.contentLB mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.top.equalTo(self.avatarIV.mas_bottom).offset(10);
-//            make.left.equalTo(self.contentView).offset(10);
-//            make.right.equalTo(self.contentView).offset(-10);
-//            make.bottom.equalTo(self.contentView).offset(-10);
-//        }];
         [self.bodyWV mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.avatarIV.mas_bottom).offset(10);
-            make.left.equalTo(self.contentView).offset(10);
-            make.right.equalTo(self.contentView).offset(-10);
-            make.bottom.equalTo(self.contentView).offset(-10);
+            make.top.equalTo(ws.avatarIV.mas_bottom).offset(10);
+            make.left.equalTo(ws.contentView).offset(10);
+            make.right.equalTo(ws.contentView).offset(-10);
+            make.bottom.equalTo(ws.contentView).offset(-10);
+            make.height.mas_greaterThanOrEqualTo(30);
+        }];
+        [self.progressAIV mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(ws.bodyWV);
+            make.size.mas_equalTo(CGSizeMake(40, 40));
         }];
     }
     return self;

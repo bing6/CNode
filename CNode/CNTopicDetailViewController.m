@@ -101,7 +101,6 @@
         make.height.mas_equalTo(50);
     }];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.edges.equalTo(ws.view).insets(UIEdgeInsetsZero);
         make.left.equalTo(ws.view);
         make.right.equalTo(ws.view);
         make.top.equalTo(ws.view);
@@ -113,9 +112,6 @@
     
     [self reloadDataSource];
     
-    /**
-     *  判断用户是否收藏了这个话题
-     */
     if ([CNLocalUser defaultUser]) {
         [CNStorage fetchFavoriteWithLoginname:[CNLocalUser defaultUser].loginname
                                   withTopicId:self.dataItem.topicId
@@ -230,6 +226,10 @@
 
 - (void)reloadDataSource {
     
+    [CNStorage fetchReplyWithTopicId:self.dataItem.topicId callback:^(NSArray *result) {
+        [self.dataSource addObjectsFromArray:result];
+    }];
+    
     API_GET_TOPIC_BY_ID(self.dataItem.topicId, ^(id responseObject, NSError *error) {
         if ([[responseObject allKeys] containsObject:@"data"]) {
             NSDictionary *data = [responseObject objectForKey:@"data"];
@@ -251,23 +251,26 @@
                                             }];
                 [self.favoriteBTN setSelected:YES];
             }
-            [self.tableView reloadData];
+            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:-1];
         }
     });
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
+    
     NSString *height_str= [webView stringByEvaluatingJavaScriptFromString: @"document.body.offsetHeight"];
     CGFloat height = [height_str floatValue];
     self.bodyHeight = height;
-    [webView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(height).priorityHigh();
-    }];
     [self.tableView reloadData];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    return YES;
+    if ([request.URL.absoluteString isEqualToString:@"about:blank"]) {
+        return YES;
+    } else {
+        [[UIApplication sharedApplication] openURL:request.URL];
+    }
+    return NO;
 }
 
 
@@ -361,13 +364,20 @@
     
     if (!self.isLoadContent) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"t" ofType:@"html"];
-        NSString *temp = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+        NSMutableString *html = [NSMutableString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
         NSString *cnt  = [self.dataItem.content stringByReplacingOccurrencesOfString:@"src=\"//" withString:@"src=\"http://"];
-        NSString *html = [NSString stringWithFormat:temp, cnt];
+        NSRange range = [html rangeOfString:@"</body>"];
+        [html insertString:cnt atIndex:range.location];
         
         [cell.bodyWV setDelegate:self];
         [cell.bodyWV loadHTMLString:html baseURL:nil];
+        [cell.progressAIV startAnimating];
+        
         self.isLoadContent = YES;
+    }
+    
+    if (self.bodyHeight > 0) {
+        [cell.progressAIV stopAnimating];
     }
 }
 
@@ -375,7 +385,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return self.bodyHeight + [tableView fd_heightForCellWithIdentifier:@"DC" configuration:^(id cell) {
+        return self.bodyHeight + [tableView fd_heightForCellWithIdentifier:@"DC" cacheByIndexPath:indexPath configuration:^(id cell) {
             [self fillCell:(CNTopicDetailTableViewCell *)cell];
         }];
     } else {
