@@ -64,7 +64,6 @@ static NSString *identifier = @"Page";
         
         layout.minimumInteritemSpacing = 0;
         layout.minimumLineSpacing = 0;
-        layout.estimatedItemSize = CGSizeMake(SCREEN_WIDTH, SCREEN_WIDTH - 104);
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
@@ -216,7 +215,9 @@ static NSString *identifier = @"Page";
 }
 
 - (void)navigationBarRightButtonHandler:(id)sender {
-    [self pushWithName:@"CNTopicEditViewController"];
+    if (![CNLoginViewController showLoginViewControllerWithParent:self]) {
+        [self pushWithName:@"CNTopicEditViewController"];
+    }
 }
 
 #pragma mark - HTHorizontalSelectionListDataSource Protocol Methods
@@ -274,7 +275,7 @@ static NSString *identifier = @"Page";
 }
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-
+    [self.collectionView reloadData];
     [self.collectionView setContentOffset:CGPointMake(self.selectionList.selectedButtonIndex * SCREEN_HEIGHT, 0)];
 }
 

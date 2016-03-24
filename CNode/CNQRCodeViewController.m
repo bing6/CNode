@@ -40,6 +40,7 @@
         _descLB.textColor = RGBA(255, 255, 255, 1);
         _descLB.backgroundColor = [UIColor clearColor];
         _descLB.numberOfLines = 0;
+        _descLB.textAlignment = NSTextAlignmentCenter;
         _descLB.font = [UIFont systemFontOfSize:14];
     }
     return _descLB;
