@@ -17,5 +17,6 @@
 @property (nonatomic, strong) NSString *content;
 @property (nonatomic, strong) NSDate *create_at;
 @property (nonatomic, strong) NSString *reply_id;
+@property (nonatomic, strong) NSArray *ups;
 
 @end

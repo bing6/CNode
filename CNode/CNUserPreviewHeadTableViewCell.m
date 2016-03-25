@@ -60,7 +60,7 @@
             make.bottom.equalTo(ws.contentView).offset(-40);
         }];
         [self.backgroundIV mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(ws.contentView).insets(UIEdgeInsetsMake(-150, 0, 0, 0));
+            make.edges.equalTo(ws.contentView).insets(UIEdgeInsetsMake(-300, 0, 0, 0));
         }];
     }
     return self;

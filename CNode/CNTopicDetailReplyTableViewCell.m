@@ -54,6 +54,7 @@
     if (_likeLB == nil) {
         _likeLB = [UILabel new];
         _likeLB.font = [UIFont systemFontOfSize:12];
+        _likeLB.numberOfLines = 0;
     }
     return _likeLB;
 }
@@ -122,10 +123,10 @@
             make.right.equalTo(ws.commentsBTN.mas_left).offset(-5);
             make.size.mas_equalTo(CGSizeMake(30, 40));
         }];
-//        [self.likeLB mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.centerY.equalTo(ws.nicknameLB);
-//            make.right.equalTo(ws.likeLB.mas_left).offset(-5);
-//        }];
+        [self.likeLB mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(ws.nicknameLB);
+            make.right.equalTo(ws.likeBTN.mas_left).offset(-2);
+        }];
     }
     return self;
 }

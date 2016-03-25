@@ -34,10 +34,15 @@
 
 #define SINGLE_LINE_WIDTH (1 / [UIScreen mainScreen].scale)
 
+#define STRING(v)   [NSString stringWithFormat:@"%@", @(v)]
+#define INT64(str)  [str longLongValue]
+#define INT32(str)  [str intValue]
+#define DOUBLE(str) [str doubleValue]
+#define FLOAT(str)  [str floatValue]
+
 /**
  * @brief 主线程运行block语句块
  */
-
 NS_INLINE void DISPATCH_MAIN_QUEUE(void (^block)(void)) {
     if ([NSThread isMainThread]) {
         block();

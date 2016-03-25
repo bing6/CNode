@@ -311,6 +311,19 @@
     cell.contentLB.attributedText = markdown_to_attr_string(item.content, 0, nil);
     cell.avatarIV.URLString = item.avatar_url;
     
+    if ([item.ups count] > 0) {
+        cell.likeLB.text = STRING(item.ups.count);
+        //如果用户登录的情况下,需要考虑是否对这个评论点过赞
+        if ([CNLocalUser defaultUser]) {
+            cell.likeBTN.selected = [item.ups containsObject:[CNLocalUser defaultUser].userId];
+        } else {
+            cell.likeBTN.selected = NO;
+        }
+    } else {
+        cell.likeLB.text = @"";
+        cell.likeBTN.selected = NO;
+    }
+    
     WS(ws);
     [cell.nicknameLB onClick:^{
         [ws pushWithName:@"CNUserPreviewViewController" params:@{ @"avatar" : item.avatar_url, @"loginname" : item.loginname}];
@@ -322,7 +335,28 @@
         ws.replyTV.contentTF.placeholder = [NSString stringWithFormat:@"@%@", item.loginname];
         ws.tempReplyId = item.pid;
     }];
-    
+    [cell.likeBTN onClick:^{
+        if (![CNLoginViewController showLoginViewControllerWithParent:ws]) {
+            [ws.hud show:YES];
+            API_POST_REPLY_UPS(item.pid, ^(id responseObject, NSError *error) {
+                if (error) {
+                    [ws showToast:[responseObject objectForKey:@"error_msg"] callback:nil];
+                } else {
+                    [ws.hud hide:YES];
+                    NSMutableArray *tmp = [NSMutableArray arrayWithArray:item.ups];
+                    
+                    if ([[responseObject objectForKey:@"action"] isEqualToString:@"up"]) {
+                        [tmp addObject:[CNLocalUser defaultUser].userId];
+                    } else {
+                        [tmp removeObject:[CNLocalUser defaultUser].userId];
+                    }
+                    item.ups = tmp;
+                    [CNStorage saveReply:@[item]];
+                    [ws.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+                }
+            });
+        }
+    }];
 }
 
 - (void)fillCell:(CNTopicDetailTableViewCell *)cell {

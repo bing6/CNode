@@ -21,7 +21,7 @@
         self.loginname = [data valueForKeyPath:@"author.loginname"];
         self.avatar_url = [data valueForKeyPath:@"author.avatar_url"];
         self.create_at = CN_MODEL_DATE_CONVERT([data objectForKey:@"create_at"]);
-
+        self.ups = [data valueForKey:@"ups"];
     }
     return self;
 }
