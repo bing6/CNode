@@ -57,7 +57,7 @@
 		375F84561C9793720018B5A4 /* CNTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F84551C9793720018B5A4 /* CNTopic.m */; };
 		375F84591C9795A40018B5A4 /* CNBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F84581C9795A40018B5A4 /* CNBaseModel.m */; };
 		375F845C1C9799450018B5A4 /* CNStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F845B1C9799450018B5A4 /* CNStorage.m */; };
-		376966601CA38EC400DB90FE /* umeng.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3769665F1CA38EC400DB90FE /* umeng.plist */; };
+		376966601CA38EC400DB90FE /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3769665F1CA38EC400DB90FE /* config.plist */; };
 		376C12341CA266A0001CB444 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 376C12331CA266A0001CB444 /* bg.jpg */; };
 		376C12381CA26AA7001CB444 /* GitHub-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 376C12371CA26AA7001CB444 /* GitHub-1@2x.png */; };
 		376C123E1CA28342001CB444 /* CNCollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 376C123D1CA28342001CB444 /* CNCollectViewController.m */; };
@@ -154,7 +154,7 @@
 		375F84581C9795A40018B5A4 /* CNBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNBaseModel.m; sourceTree = "<group>"; };
 		375F845A1C9799450018B5A4 /* CNStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNStorage.h; sourceTree = "<group>"; };
 		375F845B1C9799450018B5A4 /* CNStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNStorage.m; sourceTree = "<group>"; };
-		3769665F1CA38EC400DB90FE /* umeng.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = umeng.plist; sourceTree = "<group>"; };
+		3769665F1CA38EC400DB90FE /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		376C12331CA266A0001CB444 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		376C12371CA26AA7001CB444 /* GitHub-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GitHub-1@2x.png"; sourceTree = "<group>"; };
 		376C123C1CA28342001CB444 /* CNCollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNCollectViewController.h; sourceTree = "<group>"; };
@@ -249,7 +249,7 @@
 				373910A71C9691AF00B33B2E /* Info.plist */,
 				373910961C9691AF00B33B2E /* Supporting Files */,
 				373911351C96B8CD00B33B2E /* CNode.pch */,
-				3769665F1CA38EC400DB90FE /* umeng.plist */,
+				3769665F1CA38EC400DB90FE /* config.plist */,
 			);
 			path = CNode;
 			sourceTree = "<group>";
@@ -636,7 +636,7 @@
 				373910CE1C9691D300B33B2E /* icon-60.png in Resources */,
 				373910DF1C9691D300B33B2E /* Default-Landscape~ipad.png in Resources */,
 				373910E31C9691D300B33B2E /* Default~iphone.png in Resources */,
-				376966601CA38EC400DB90FE /* umeng.plist in Resources */,
+				376966601CA38EC400DB90FE /* config.plist in Resources */,
 				373910D91C9691D300B33B2E /* Logo.png in Resources */,
 				373910D51C9691D300B33B2E /* Icon-Small.png in Resources */,
 				373910A61C9691AF00B33B2E /* LaunchScreen.storyboard in Resources */,
@@ -849,6 +849,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8E02C7AFA6AF725789A443CD /* Pods.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -869,6 +873,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 142EC1FA6B0C7BB3413132F8 /* Pods.release.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";

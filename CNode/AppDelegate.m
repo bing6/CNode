@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 #import <MobClick.h>
+#import <AFNetworking/AFNetworking.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UIAlertViewDelegate>
 
 @end
 
@@ -17,10 +18,54 @@
 
 - (void)umengSetup {
     
-    NSString *umPath = [[NSBundle mainBundle] pathForResource:@"umeng" ofType:@"plist"];
-    NSDictionary *umConfiger = [NSDictionary dictionaryWithContentsOfFile:umPath];
-    if (umConfiger) {
-        [MobClick startWithAppkey:[umConfiger objectForKey:@"appid"] reportPolicy:BATCH channelId:[umConfiger objectForKey:@"channel"]];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"plist"];
+    NSDictionary *configer = [NSDictionary dictionaryWithContentsOfFile:path];
+    if (configer) {
+        [MobClick startWithAppkey:[configer objectForKey:@"umeng_appid"] reportPolicy:BATCH channelId:[configer objectForKey:@"umeng_channel"]];
+    }
+}
+
+- (void)checkUpdate {
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"plist"];
+    NSDictionary *configer = [NSDictionary dictionaryWithContentsOfFile:path];
+    if (configer) {
+        NSString *appid = [configer objectForKey:@"fir_id"];
+        NSString *token = [configer objectForKey:@"fir_token"];
+        NSString *idUrlString = [NSString stringWithFormat:@"http://api.fir.im/apps/latest/%@?api_token=%@", appid, token];
+        NSURL *requestURL = [NSURL URLWithString:idUrlString];
+        NSURLRequest *request = [NSURLRequest requestWithURL:requestURL];
+        
+        AFURLSessionManager *sessionManager = [[AFURLSessionManager alloc] init];
+        
+        
+        NSURLSessionDataTask *dataTask = [sessionManager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+
+            NSString *currVersion = [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleVersion"];
+            NSString *dataVersion = [responseObject objectForKey:@"version"];
+            NSString *uv = [[NSUserDefaults standardUserDefaults] objectForKey:@"updateVersion"];
+            
+            if ([uv isEqualToString:dataVersion]) {
+                return;
+            }
+            
+            [[NSUserDefaults standardUserDefaults] setObject:dataVersion forKey:@"updateVersion"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
+            if ([dataVersion compare:currVersion] == NSOrderedDescending) {
+                UIAlertView *aler = [[UIAlertView alloc] initWithTitle:nil message:@"有新版本啦!" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"更新", nil];
+                [aler show];
+            }
+        }];
+        [dataTask resume];
+    }
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex > 0) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://fir.im/rutx"]];
     }
 }
 
@@ -29,7 +74,8 @@
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     //集成友盟统计
     [self umengSetup];
-
+    //检测更新
+    [self checkUpdate];
     return YES;
 }
 
