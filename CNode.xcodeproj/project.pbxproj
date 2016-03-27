@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3723A53B1CA761B50068A421 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3723A53A1CA761B50068A421 /* config.plist */; };
 		373910981C9691AF00B33B2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 373910971C9691AF00B33B2E /* main.m */; };
 		3739109B1C9691AF00B33B2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3739109A1C9691AF00B33B2E /* AppDelegate.m */; };
 		3739109E1C9691AF00B33B2E /* CNTopicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3739109D1C9691AF00B33B2E /* CNTopicListViewController.m */; };
@@ -85,6 +86,7 @@
 /* Begin PBXFileReference section */
 		04A55AA8FF523AB912A06EEA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		142EC1FA6B0C7BB3413132F8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		3723A53A1CA761B50068A421 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		373910931C9691AF00B33B2E /* CNode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CNode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		373910971C9691AF00B33B2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		373910991C9691AF00B33B2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				373910A21C9691AF00B33B2E /* Assets.xcassets */,
 				373910A41C9691AF00B33B2E /* LaunchScreen.storyboard */,
 				373910A71C9691AF00B33B2E /* Info.plist */,
+				3723A53A1CA761B50068A421 /* config.plist */,
 				373910961C9691AF00B33B2E /* Supporting Files */,
 				373911351C96B8CD00B33B2E /* CNode.pch */,
 			);
@@ -577,7 +580,7 @@
 				TargetAttributes = {
 					373910921C9691AF00B33B2E = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 6S9X8Y84LR;
+						DevelopmentTeam = LZ353L4S2K;
 					};
 				};
 			};
@@ -618,6 +621,7 @@
 				373910E01C9691D300B33B2E /* Default-Portrait@2x~ipad.png in Resources */,
 				373910CD1C9691D300B33B2E /* icon-50@2x.png in Resources */,
 				373910E21C9691D300B33B2E /* Default@2x~iphone.png in Resources */,
+				3723A53B1CA761B50068A421 /* config.plist in Resources */,
 				373910D21C9691D300B33B2E /* Icon-72@2x.png in Resources */,
 				373910D41C9691D300B33B2E /* Icon-76@2x.png in Resources */,
 				373910CA1C9691D300B33B2E /* Icon-40.png in Resources */,
@@ -875,7 +879,7 @@
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing proud Era Information Technology Co., Ltd.";
 				GCC_PREFIX_HEADER = CNode/CNode.pch;
 				INFOPLIST_FILE = CNode/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
