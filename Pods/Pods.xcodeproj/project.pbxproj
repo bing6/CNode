@@ -3129,24 +3129,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		01D43664F45D81769FCFDFFC9A0AE894 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE385CDC2882D633ECB1F43881A98A2B /* SVGKit.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SVGKit/SVGKit-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		052A17875CB827423D627183396CEB60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3181,100 +3163,14 @@
 			};
 			name = Release;
 		};
-		08510EE0217230DC48AD1E410FA2EA32 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C57E957658B6387EAEBFF3E71A6157E /* HMSegmentedControl.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/HMSegmentedControl/HMSegmentedControl-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		14F3515948D627A514316419AF97DD4B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 545E538553B6A3C0249717ED96474D8D /* HTHorizontalSelectionList.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/HTHorizontalSelectionList/HTHorizontalSelectionList-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		17224E02F0E8CE2AC8EF6DDD7B535094 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 730DCDBC5CE4B5A8025AAF0BAA147A6A /* AFNetworking.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		1D170BD7E8EB420FBD5318D3D5550857 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6D6BC3D711E4A4E471A7C3E2993F535 /* CocoaLumberjack.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CocoaLumberjack/CocoaLumberjack-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		3A2A3C95E1EDF73DEF947480F6B2FCC9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0162163030B4D540CD75891A236D01E3 /* Masonry.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		5A04247B5A1DB50A5E6B8769C5C715A9 /* Debug */ = {
+		088D0AAEE89DB78DFD5CEC612B428F00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MACH_O_TYPE = staticlib;
@@ -3288,12 +3184,16 @@
 			};
 			name = Debug;
 		};
-		641F071BD177C0FD805ECAF1D202F7CB /* Release */ = {
+		0EE9F1E181790366043446EC65A34E45 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07400853A3E651BE2B2C60FC64EFB2D6 /* FMDB.xcconfig */;
+			baseConfigurationReference = BA21B10BF3DF0845A9D7CD9B750611BD /* UITableView+FDTemplateLayoutCell.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -3306,13 +3206,61 @@
 			};
 			name = Release;
 		};
-		66D9B2F7D24D69BB3EF0555FC9FD11FE /* Debug */ = {
+		1244BCDF4C57476B0DDAABFCDAC0AB81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 65294F9262C33A9F6F13C15D1A1C16BC /* SDWebImage.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1DACC7101050456E8D45DD652C866F80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45C4EA5AC74E4022E7BD14BEC4E197BA /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		293B00FBE60CC58A9E759E4271CF7F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0162163030B4D540CD75891A236D01E3 /* Masonry.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -3324,30 +3272,16 @@
 			};
 			name = Debug;
 		};
-		6A418FE39BF84A9EBC33651D9F2E2F6D /* Debug */ = {
+		52B85FC36804E0F78D1249ED298CD359 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA21B10BF3DF0845A9D7CD9B750611BD /* UITableView+FDTemplateLayoutCell.xcconfig */;
+			baseConfigurationReference = EE385CDC2882D633ECB1F43881A98A2B /* SVGKit.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		72CD89E437BB4206B704F446FA8315A3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA21B10BF3DF0845A9D7CD9B750611BD /* UITableView+FDTemplateLayoutCell.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/SVGKit/SVGKit-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -3360,45 +3294,14 @@
 			};
 			name = Release;
 		};
-		74CBC33F539C8D7819779B061289A0DA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		7680C5A568ABE01512361AF2AF422902 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C57E957658B6387EAEBFF3E71A6157E /* HMSegmentedControl.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/HMSegmentedControl/HMSegmentedControl-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		81B1EF0BD74BEA044170B800EF9AE62A /* Release */ = {
+		53D32A715CADFD33F25FC96A73BB82EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34B1ED41F71C0A9D7062764E4C919C05 /* KSRefresh.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/KSRefresh/KSRefresh-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -3413,12 +3316,16 @@
 			};
 			name = Release;
 		};
-		88F6B45900D1385FAE46715C567544D0 /* Debug */ = {
+		624BF8260A233ADEAB7FA4B513441D9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE385CDC2882D633ECB1F43881A98A2B /* SVGKit.xcconfig */;
+			baseConfigurationReference = 730DCDBC5CE4B5A8025AAF0BAA147A6A /* AFNetworking.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SVGKit/SVGKit-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -3431,46 +3338,14 @@
 			};
 			name = Debug;
 		};
-		8E22345807C46884D17DD8C2728A6201 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07400853A3E651BE2B2C60FC64EFB2D6 /* FMDB.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		90686B2A0908F72082A156739211CE4C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 545E538553B6A3C0249717ED96474D8D /* HTHorizontalSelectionList.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/HTHorizontalSelectionList/HTHorizontalSelectionList-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		9284435D24DB241C3E5B75990F9FA35A /* Release */ = {
+		6ECCC9BFE4598A3A51CF4ECDDFCA8A3B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E1C46963863F8B481D3992ADD5FDA4E7 /* AttributedMarkdown.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/AttributedMarkdown/AttributedMarkdown-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -3485,12 +3360,16 @@
 			};
 			name = Release;
 		};
-		980FF6958315F69CE01543F2391B9649 /* Release */ = {
+		720F7FC069EB32989A14C2200630F925 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75C898F32EB26DB7FF5F87474CE7AF03 /* M13BadgeView.xcconfig */;
+			baseConfigurationReference = 0C57E957658B6387EAEBFF3E71A6157E /* HMSegmentedControl.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/M13BadgeView/M13BadgeView-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/HMSegmentedControl/HMSegmentedControl-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -3503,10 +3382,14 @@
 			};
 			name = Release;
 		};
-		98EBE1608BD0CBBF5247F4591FA579C1 /* Debug */ = {
+		730112B2FD85FED9DE7D102C701DD656 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 75C898F32EB26DB7FF5F87474CE7AF03 /* M13BadgeView.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/M13BadgeView/M13BadgeView-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -3521,12 +3404,16 @@
 			};
 			name = Debug;
 		};
-		A08617A14ECA22AB5EAB8BF7D6100C92 /* Release */ = {
+		734CD84942F8F6CA2EC3C0E1B6770545 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65294F9262C33A9F6F13C15D1A1C16BC /* SDWebImage.xcconfig */;
+			baseConfigurationReference = B6D6BC3D711E4A4E471A7C3E2993F535 /* CocoaLumberjack.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaLumberjack/CocoaLumberjack-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -3539,10 +3426,58 @@
 			};
 			name = Release;
 		};
-		A6C9F62F7C92008E8617ABAC38635FAA /* Debug */ = {
+		7655C7800B7118F32FA301083F409B44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1C46963863F8B481D3992ADD5FDA4E7 /* AttributedMarkdown.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AttributedMarkdown/AttributedMarkdown-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8335CBF4DB340BDE6A3B777713356B8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B4483613FDBB0E7F73E26F47591EFDD /* FMDBDataTable.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FMDBDataTable/FMDBDataTable-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8E5F8287C81B18E1BD23E1991FC9BFE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B6D6BC3D711E4A4E471A7C3E2993F535 /* CocoaLumberjack.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/CocoaLumberjack/CocoaLumberjack-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -3557,12 +3492,125 @@
 			};
 			name = Debug;
 		};
-		AA9ACE1D62CE7A30FB21344DC2E48C67 /* Debug */ = {
+		90BAC32FC8F2C37E2B75F58D7DC2F290 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1C46963863F8B481D3992ADD5FDA4E7 /* AttributedMarkdown.xcconfig */;
+			baseConfigurationReference = 07400853A3E651BE2B2C60FC64EFB2D6 /* FMDB.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AttributedMarkdown/AttributedMarkdown-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		92D01873FDD1FCCA474D9B43244E94EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9A015F4D58FEC24B80C5893CD00F27C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75C898F32EB26DB7FF5F87474CE7AF03 /* M13BadgeView.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/M13BadgeView/M13BadgeView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9AED308E149F1A515D663D11E8738B8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 730DCDBC5CE4B5A8025AAF0BAA147A6A /* AFNetworking.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A2EBBDBB5D5195C8AB675842749F929B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA21B10BF3DF0845A9D7CD9B750611BD /* UITableView+FDTemplateLayoutCell.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A35125E6D114DA99E50A3E62C4D91770 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65294F9262C33A9F6F13C15D1A1C16BC /* SDWebImage.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -3614,14 +3662,40 @@
 			};
 			name = Debug;
 		};
-		C5AFFFCB54FD9036E7BC9BA54ADAAF30 /* Release */ = {
+		B6AF8F51C43F88FC0FFC7363703E8BD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE385CDC2882D633ECB1F43881A98A2B /* SVGKit.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SVGKit/SVGKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B9BCC484285303B981AFAFF69F4F4FFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 45C4EA5AC74E4022E7BD14BEC4E197BA /* MBProgressHUD.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -3630,16 +3704,20 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		CF42542529F689B52406696B5784E1F9 /* Release */ = {
+		CA8EBBD74F7B0852747D8429EF112C17 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 730DCDBC5CE4B5A8025AAF0BAA147A6A /* AFNetworking.xcconfig */;
+			baseConfigurationReference = 07400853A3E651BE2B2C60FC64EFB2D6 /* FMDB.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -3648,12 +3726,60 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		D1B30136E321401AF00D092C95464446 /* Debug */ = {
+		CDC901EDEA46B82BFF23CF7A6764ED79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 545E538553B6A3C0249717ED96474D8D /* HTHorizontalSelectionList.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HTHorizontalSelectionList/HTHorizontalSelectionList-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D4CCAA0F8CE8FF3D015071C0CA2AE499 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C57E957658B6387EAEBFF3E71A6157E /* HMSegmentedControl.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HMSegmentedControl/HMSegmentedControl-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DDFA0E4A2074DB50E372E441A7906BB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34B1ED41F71C0A9D7062764E4C919C05 /* KSRefresh.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/KSRefresh/KSRefresh-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -3668,14 +3794,18 @@
 			};
 			name = Debug;
 		};
-		E6C6571173B4BB96575CDFAA52920FBA /* Debug */ = {
+		DF52F548C7136B1829108DE42B7DF16E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B4483613FDBB0E7F73E26F47591EFDD /* FMDBDataTable.xcconfig */;
+			baseConfigurationReference = 0162163030B4D540CD75891A236D01E3 /* Masonry.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FMDBDataTable/FMDBDataTable-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -3684,16 +3814,20 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		E7B8141DB24F5AA0D1F847AFEC0DB018 /* Debug */ = {
+		E06447703F9089AB201084235B5053FD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45C4EA5AC74E4022E7BD14BEC4E197BA /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = 545E538553B6A3C0249717ED96474D8D /* HTHorizontalSelectionList.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/HTHorizontalSelectionList/HTHorizontalSelectionList-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -3702,12 +3836,16 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		EDD5B869BB28E43130CECBBB1B58CDF2 /* Release */ = {
+		FCAF9089354DBAD72FE28056C6F915E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9B4483613FDBB0E7F73E26F47591EFDD /* FMDBDataTable.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv7s,arm64",
+				);
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/FMDBDataTable/FMDBDataTable-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -3721,24 +3859,6 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
-		};
-		EE43A56420D041C473C78C19CD1B0EDB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0162163030B4D540CD75891A236D01E3 /* Masonry.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -3755,8 +3875,8 @@
 		347E9BA283340153288375433E29A926 /* Build configuration list for PBXNativeTarget "HMSegmentedControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				08510EE0217230DC48AD1E410FA2EA32 /* Debug */,
-				7680C5A568ABE01512361AF2AF422902 /* Release */,
+				D4CCAA0F8CE8FF3D015071C0CA2AE499 /* Debug */,
+				720F7FC069EB32989A14C2200630F925 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3764,8 +3884,8 @@
 		38F5134DAA8FFB9DFA12AAF62C5B42BE /* Build configuration list for PBXNativeTarget "HTHorizontalSelectionList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				90686B2A0908F72082A156739211CE4C /* Debug */,
-				14F3515948D627A514316419AF97DD4B /* Release */,
+				CDC901EDEA46B82BFF23CF7A6764ED79 /* Debug */,
+				E06447703F9089AB201084235B5053FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3773,8 +3893,8 @@
 		3AC899FD215914230EB9D8B57AD910D0 /* Build configuration list for PBXNativeTarget "FMDB" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8E22345807C46884D17DD8C2728A6201 /* Debug */,
-				641F071BD177C0FD805ECAF1D202F7CB /* Release */,
+				CA8EBBD74F7B0852747D8429EF112C17 /* Debug */,
+				90BAC32FC8F2C37E2B75F58D7DC2F290 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3782,8 +3902,8 @@
 		46AC82B10C93A25B275DF0C625D2A51F /* Build configuration list for PBXNativeTarget "KSRefresh" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D1B30136E321401AF00D092C95464446 /* Debug */,
-				81B1EF0BD74BEA044170B800EF9AE62A /* Release */,
+				DDFA0E4A2074DB50E372E441A7906BB8 /* Debug */,
+				53D32A715CADFD33F25FC96A73BB82EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3791,8 +3911,8 @@
 		480EA69CC0254C932671547B0BF53F13 /* Build configuration list for PBXNativeTarget "AttributedMarkdown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA9ACE1D62CE7A30FB21344DC2E48C67 /* Debug */,
-				9284435D24DB241C3E5B75990F9FA35A /* Release */,
+				7655C7800B7118F32FA301083F409B44 /* Debug */,
+				6ECCC9BFE4598A3A51CF4ECDDFCA8A3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3800,8 +3920,8 @@
 		5B7DD1FA8E99E5843B53502C0CEEB9E0 /* Build configuration list for PBXNativeTarget "M13BadgeView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				98EBE1608BD0CBBF5247F4591FA579C1 /* Debug */,
-				980FF6958315F69CE01543F2391B9649 /* Release */,
+				730112B2FD85FED9DE7D102C701DD656 /* Debug */,
+				9A015F4D58FEC24B80C5893CD00F27C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3809,8 +3929,8 @@
 		6C2F859618676DC0DB996DDBE8F98494 /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5A04247B5A1DB50A5E6B8769C5C715A9 /* Debug */,
-				74CBC33F539C8D7819779B061289A0DA /* Release */,
+				088D0AAEE89DB78DFD5CEC612B428F00 /* Debug */,
+				92D01873FDD1FCCA474D9B43244E94EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3818,8 +3938,8 @@
 		77CC2275470CFC9C7A84B5650A856B79 /* Build configuration list for PBXNativeTarget "FMDBDataTable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E6C6571173B4BB96575CDFAA52920FBA /* Debug */,
-				EDD5B869BB28E43130CECBBB1B58CDF2 /* Release */,
+				8335CBF4DB340BDE6A3B777713356B8B /* Debug */,
+				FCAF9089354DBAD72FE28056C6F915E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3827,8 +3947,8 @@
 		77CF2A7107BC61A2E90025871305961D /* Build configuration list for PBXNativeTarget "AFNetworking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				17224E02F0E8CE2AC8EF6DDD7B535094 /* Debug */,
-				CF42542529F689B52406696B5784E1F9 /* Release */,
+				624BF8260A233ADEAB7FA4B513441D9A /* Debug */,
+				9AED308E149F1A515D663D11E8738B8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3836,8 +3956,8 @@
 		95F8C29CABA854647AC0D8CC5213E1DD /* Build configuration list for PBXNativeTarget "UITableView+FDTemplateLayoutCell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A418FE39BF84A9EBC33651D9F2E2F6D /* Debug */,
-				72CD89E437BB4206B704F446FA8315A3 /* Release */,
+				A2EBBDBB5D5195C8AB675842749F929B /* Debug */,
+				0EE9F1E181790366043446EC65A34E45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3845,8 +3965,8 @@
 		B6653DB75D219E078020C341A7D83ECE /* Build configuration list for PBXNativeTarget "Masonry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE43A56420D041C473C78C19CD1B0EDB /* Debug */,
-				3A2A3C95E1EDF73DEF947480F6B2FCC9 /* Release */,
+				293B00FBE60CC58A9E759E4271CF7F43 /* Debug */,
+				DF52F548C7136B1829108DE42B7DF16E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3854,8 +3974,8 @@
 		BFF0AAF22A1641D18130FAF4248C6259 /* Build configuration list for PBXNativeTarget "SDWebImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				66D9B2F7D24D69BB3EF0555FC9FD11FE /* Debug */,
-				A08617A14ECA22AB5EAB8BF7D6100C92 /* Release */,
+				A35125E6D114DA99E50A3E62C4D91770 /* Debug */,
+				1244BCDF4C57476B0DDAABFCDAC0AB81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3863,8 +3983,8 @@
 		E0C8BB684C9CCC379207FFA69ED0D571 /* Build configuration list for PBXNativeTarget "CocoaLumberjack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A6C9F62F7C92008E8617ABAC38635FAA /* Debug */,
-				1D170BD7E8EB420FBD5318D3D5550857 /* Release */,
+				8E5F8287C81B18E1BD23E1991FC9BFE5 /* Debug */,
+				734CD84942F8F6CA2EC3C0E1B6770545 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3872,8 +3992,8 @@
 		F2F5671C4613023EE94A2E62DA06031D /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E7B8141DB24F5AA0D1F847AFEC0DB018 /* Debug */,
-				C5AFFFCB54FD9036E7BC9BA54ADAAF30 /* Release */,
+				B9BCC484285303B981AFAFF69F4F4FFC /* Debug */,
+				1DACC7101050456E8D45DD652C866F80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3881,8 +4001,8 @@
 		F5CDCA129E8420679EBA5C7F85EE097A /* Build configuration list for PBXNativeTarget "SVGKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				88F6B45900D1385FAE46715C567544D0 /* Debug */,
-				01D43664F45D81769FCFDFFC9A0AE894 /* Release */,
+				B6AF8F51C43F88FC0FFC7363703E8BD0 /* Debug */,
+				52B85FC36804E0F78D1249ED298CD359 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

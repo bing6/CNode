@@ -12,3 +12,4 @@ pod 'KSRefresh', '~> 0.4'
 pod 'HTHorizontalSelectionList', '~> 0.6.4'
 pod 'HMSegmentedControl'
 pod 'UMengAnalytics-NO-IDFA'
+
